@@ -1,0 +1,140 @@
+server:
+  port: 50010
+  servlet:
+    context-path: /CoopTillApi-1.0.0
+
+trust:
+  keyStorePath: classpath:keystore/soa-blue.jks
+  keyStorePassword: changeit
+  #Updated certificate
+
+cooptill:
+  shortcode: 400200
+  email:
+password:
+  restrict_repeat:
+  history_limit:
+pin:
+  restrict_repeat:
+  history_limit:
+
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    hikari:
+      maximum-pool-size: 5
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    url:
+    user:
+    password:
+    baseline-on-migrate: true
+    enabled: false
+
+
+  kafka:
+    bootstrap-servers:
+    topic-name:
+
+
+logging:
+  file:
+    name: /var/logs/cooptill.log
+    max-size: 20MB
+  level:
+    root: INFO
+
+jwt:
+  token:
+    secret: ======================CoopTillApiKoder=Spring===========================
+    expirationInMs: 86400000
+
+encdec:
+  secret: IXBAJHN3MHJkX2RyMHdzJEBwIQ==
+  #!p@$sw0rd_dr0ws$@p!
+
+onboarding:
+  registrationalertid: 100
+
+otp:
+  expiryduration: 30
+  appactivationalertid: 101
+  nfcalertid: 102
+
+logs:
+  soa:
+    ison: 1
+
+soa:
+  authorization:
+    username: omni
+    password: omni123
+
+  authorizationBlue:
+    username:
+    password:
+
+  request:
+    systemcode: 068
+    username: omni
+    password: password
+
+  getaccountdetails:
+    url:
+
+  fundstransfer:
+    url:
+
+  accountbalanceget:
+    url:
+
+  cashpickup:
+    url:
+
+  getcarddetails:
+    url:
+
+  validatempesaagentdetails:
+    url:
+
+  floatpurchase:
+    url:
+    systemcode:
+    commandid:
+
+  sendsms:
+    url:
+    credentials:
+      username:
+      password:
+      encryped:
+      clientID:
+
+  sendEmail:
+    url:
+
+  cooptillStatement:
+    url:
+
+  transactionNotification:
+    url:
+
+  stkPush:
+    telcoName:
+    businessCode:
+    url:
+    callbackUrl:
+
+reportsEngine:
+  url:
