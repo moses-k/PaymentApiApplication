@@ -1,15 +1,9 @@
 server:
-  port: 50010
+  port: 9090
   servlet:
-    context-path: /CoopTillApi-1.0.0
-
-trust:
-  keyStorePath: classpath:keystore/soa-blue.jks
-  keyStorePassword: changeit
-  #Updated certificate
-
-cooptill:
-  shortcode: 400200
+    context-path: /B2CApi-1.0.0
+b2capi:
+  shortcode: 12345
   email:
 password:
   restrict_repeat:
@@ -17,7 +11,6 @@ password:
 pin:
   restrict_repeat:
   history_limit:
-
 
 spring:
   datasource:
@@ -35,106 +28,31 @@ spring:
     properties:
       hibernate:
         format_sql: true
-  flyway:
-    url:
-    user:
-    password:
-    baseline-on-migrate: true
-    enabled: false
-
-
-  kafka:
-    bootstrap-servers:
-    topic-name:
-
 
 logging:
   file:
-    name: /var/logs/cooptill.log
+    name: /var/logs/b2c.log
     max-size: 20MB
   level:
     root: INFO
 
 jwt:
   token:
-    secret: ======================CoopTillApiKoder=Spring===========================
+    secret: ======================B2cApiApiKoder=Spring===========================
     expirationInMs: 86400000
 
 encdec:
-  secret: IXBAJHN3MHJkX2RyMHdzJEBwIQ==
-  #!p@$sw0rd_dr0ws$@p!
+  secret: IXBAJHN3MHJkMHdzJEBwIQ==
 
 onboarding:
   registrationalertid: 100
-
-otp:
-  expiryduration: 30
-  appactivationalertid: 101
-  nfcalertid: 102
-
-logs:
-  soa:
-    ison: 1
-
-soa:
-  authorization:
-    username: omni
-    password: omni123
 
   authorizationBlue:
     username:
     password:
 
-  request:
-    systemcode: 068
-    username: omni
-    password: password
 
-  getaccountdetails:
-    url:
 
-  fundstransfer:
-    url:
 
-  accountbalanceget:
-    url:
 
-  cashpickup:
-    url:
 
-  getcarddetails:
-    url:
-
-  validatempesaagentdetails:
-    url:
-
-  floatpurchase:
-    url:
-    systemcode:
-    commandid:
-
-  sendsms:
-    url:
-    credentials:
-      username:
-      password:
-      encryped:
-      clientID:
-
-  sendEmail:
-    url:
-
-  cooptillStatement:
-    url:
-
-  transactionNotification:
-    url:
-
-  stkPush:
-    telcoName:
-    businessCode:
-    url:
-    callbackUrl:
-
-reportsEngine:
-  url:
